@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# Updated on Dec. 19, 2018 --- Update the print information
+
 # parameters for local host
 localDir=`pwd`/
 
@@ -100,13 +102,13 @@ fi
 
 if [[ $direction == "-f" || $direction == "--from" ]]
 then
-    echo "copy from the remote host..."
+    echo "localhost <<--<<--<< $fileName <<--<<--<< $remoteHost"
     scp $remoteUserID@$remoteIp:$remoteDir$fileName $localDir
 fi
 
 if [[ $direction == "-t" || $direction == "--to" ]]
 then
-    echo "copy to the remote host..."
+    echo "localhost >>-->>-->> $fileName >>-->>-->> $remoteHost"
     scp $localDir$fileName $remoteUserID@$remoteIp:$remoteDir
 fi
 

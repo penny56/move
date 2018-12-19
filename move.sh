@@ -1,6 +1,7 @@
 #! /bin/bash
 
 # Updated on Dec. 19, 2018 --- Update the print information
+# Updated on Dec. 19, 2018 --- Update the indent and 9kp10 host issue
 
 # parameters for local host
 localDir=`pwd`/
@@ -66,35 +67,35 @@ then
     remoteDir="/home/hmcmanager/yj/"
     remoteUserID="hmcmanager"
 elif [[ $remoteHost == "sem257" ]]
-    then
-        remoteIp="9.12.16.208"
-        remoteDir="/home/hmcmanager/yj/"
-        remoteUserID="hmcmanager"
+then
+    remoteIp="9.12.16.208"
+    remoteDir="/home/hmcmanager/yj/"
+    remoteUserID="hmcmanager"
 elif  [[ $remoteHost == "s10" ]]
 then
     remoteIp="9.12.23.17"
     remoteDir="/root/yj/"
     remoteUserID="root"
 elif [[ $remoteHost == "hmc1" ]]
-    then
-        remoteIp="9.12.35.134"
-        remoteDir="/home/hmcmanager/yj/"
-        remoteUserID="hmcmanager"
+then
+    remoteIp="9.12.35.134"
+    remoteDir="/home/hmcmanager/yj/"
+    remoteUserID="hmcmanager"
 elif [[ $remoteHost == "hmc2" ]]
-    then
-        remoteIp="9.12.35.135"
-        remoteDir="/home/hmcmanager/yj/"
-        remoteUserID="hmcmanager"
+then
+    remoteIp="9.12.35.135"
+    remoteDir="/home/hmcmanager/yj/"
+    remoteUserID="hmcmanager"
 elif [[ $remoteHost == "9kp10" ]]
-    then
-        remoteIp="root@10.20.92.205"
-        remoteDir="/root/yj/"
-        remoteUserID="root"
+then
+    remoteIp="10.20.92.205"
+    remoteDir="/root/yj/"
+    remoteUserID="root"
 elif [[ $remoteHost == "2kp10" ]]
-    then
-        remoteIp="10.20.92.216"
-        remoteDir="/root/yj/"
-        remoteUserID="root"
+then
+    remoteIp="10.20.92.216"
+    remoteDir="/root/yj/"
+    remoteUserID="root"
 else
     echo "Please add the remote host parameters to the script..."
     exit 2

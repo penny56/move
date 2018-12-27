@@ -86,6 +86,11 @@ then
     remoteIp="9.12.35.135"
     remoteDir="/home/hmcmanager/yj/"
     remoteUserID="hmcmanager"
+elif [[ $remoteHost == "vm" ]]
+then
+    remoteIp="9.112.234.95"
+    remoteDir="/root/yj/"
+    remoteUserID="root"
 elif [[ $remoteHost == "9kp10" ]]
 then
     remoteIp="10.20.92.205"

@@ -20,6 +20,7 @@ function  usage() {
     echo "    sem90:    hmcmanager@9.12.16.136"
     echo "    sem257:   hmcmanager@9.12.16.208"
     echo "    s10:      root@9.12.23.17"
+    echo "    2lt02     root@9.12.23.102"
     echo "    hmc1:     hmcmanager@9.12.35.134"
     echo "    hmc2:     hmcmanager@9.12.35.135"
     echo "    9kp10:    root@10.20.92.205"
@@ -74,6 +75,11 @@ then
 elif  [[ $remoteHost == "s10" ]]
 then
     remoteIp="9.12.23.17"
+    remoteDir="/root/yj/"
+    remoteUserID="root"
+elif  [[ $remoteHost == "2lt02" ]]
+then
+    remoteIp="9.12.23.102"
     remoteDir="/root/yj/"
     remoteUserID="root"
 elif [[ $remoteHost == "hmc1" ]]

@@ -19,12 +19,15 @@ function  usage() {
     echo "Now the support remote host list include:"
     echo "    sem90:    hmcmanager@9.12.16.136"
     echo "    sem257:   hmcmanager@9.12.16.208"
+    echo "    rundeck:	yijie@9.12.19.67"
     echo "    s10:      root@9.12.23.17"
     echo "    2lt02     root@9.12.23.102"
     echo "    hmc1:     hmcmanager@9.12.35.134"
     echo "    hmc2:     hmcmanager@9.12.35.135"
     echo "    9kp10:    root@10.20.92.205"
     echo "    2kp10:    root@10.20.92.216"
+    echo "    rhel:	root@9.112.234.95"
+    echo "    cent:	root@9.111.221.37 <expired>"
     echo
     echo "Examples:"
     echo "    ./move.sh -t s10 -o move.ini    Copy the local move.ini to the remote s10"
@@ -72,6 +75,11 @@ then
     remoteIp="9.12.16.208"
     remoteDir="/home/hmcmanager/yj/"
     remoteUserID="hmcmanager"
+elif  [[ $remoteHost == "rundeck" ]]
+then
+    remoteIp="9.12.19.67"
+    remoteDir="/tmp/yj/"
+    remoteUserID="yijie"
 elif  [[ $remoteHost == "s10" ]]
 then
     remoteIp="9.12.23.17"
@@ -92,9 +100,14 @@ then
     remoteIp="9.12.35.135"
     remoteDir="/home/hmcmanager/yj/"
     remoteUserID="hmcmanager"
-elif [[ $remoteHost == "vm" ]]
+elif [[ $remoteHost == "rhel" ]]
 then
     remoteIp="9.112.234.95"
+    remoteDir="/root/yj/"
+    remoteUserID="root"
+elif [[ $remoteHost == "cent" ]]
+then
+    remoteIp="9.111.221.37"
     remoteDir="/root/yj/"
     remoteUserID="root"
 elif [[ $remoteHost == "9kp10" ]]

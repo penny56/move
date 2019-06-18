@@ -17,7 +17,7 @@ function  usage() {
     echo "-h, --help                    show this help"
     echo
     echo "Now the support remote host list include:"
-    echo "    sem90:    hmcmanager@9.12.16.136"
+    echo "    set90:    hmcmanager@9.12.16.136"
     echo "    sem257:   hmcmanager@9.12.16.208"
     echo "    rundeck:	yijie@9.12.19.67"
     echo "    s10:      root@9.12.23.17"
@@ -65,15 +65,15 @@ do
     esac
 done
 
-if [[ $remoteHost == "sem90" ]]
+if [[ $remoteHost == "set90" ]]
 then
     remoteIp="9.12.16.136"
-    remoteDir="/home/hmcmanager/yj/"
+    remoteDir="/home/hmcmanager/"
     remoteUserID="hmcmanager"
 elif [[ $remoteHost == "sem257" ]]
 then
     remoteIp="9.12.16.208"
-    remoteDir="/home/hmcmanager/yj/"
+    remoteDir="/home/hmcmanager/"
     remoteUserID="hmcmanager"
 elif  [[ $remoteHost == "rundeck" ]]
 then
@@ -93,12 +93,12 @@ then
 elif [[ $remoteHost == "hmc1" ]]
 then
     remoteIp="9.12.35.134"
-    remoteDir="/home/hmcmanager/yj/"
+    remoteDir="/home/hmcmanager/"
     remoteUserID="hmcmanager"
 elif [[ $remoteHost == "hmc2" ]]
 then
     remoteIp="9.12.35.135"
-    remoteDir="/home/hmcmanager/yj/"
+    remoteDir="/home/hmcmanager/"
     remoteUserID="hmcmanager"
 elif [[ $remoteHost == "rhel" ]]
 then

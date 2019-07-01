@@ -68,12 +68,12 @@ done
 if [[ $remoteHost == "set90" ]]
 then
     remoteIp="9.12.16.136"
-    remoteDir="/home/hmcmanager/"
+    remoteDir="/tmp/yj/"
     remoteUserID="hmcmanager"
 elif [[ $remoteHost == "sem257" ]]
 then
     remoteIp="9.12.16.208"
-    remoteDir="/home/hmcmanager/"
+    remoteDir="/tmp/yj/"
     remoteUserID="hmcmanager"
 elif  [[ $remoteHost == "rundeck" ]]
 then
@@ -93,12 +93,12 @@ then
 elif [[ $remoteHost == "hmc1" ]]
 then
     remoteIp="9.12.35.134"
-    remoteDir="/home/hmcmanager/"
+    remoteDir="/tmp/yj/"
     remoteUserID="hmcmanager"
 elif [[ $remoteHost == "hmc2" ]]
 then
     remoteIp="9.12.35.135"
-    remoteDir="/home/hmcmanager/"
+    remoteDir="/tmp/yj/"
     remoteUserID="hmcmanager"
 elif [[ $remoteHost == "rhel" ]]
 then

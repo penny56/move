@@ -1,5 +1,6 @@
 #! /bin/bash
 
+# Updated on Jan. 20, 2020 --- Update the hostname s10 to rundeck, rundeck to runnode
 # Updated on Dec. 19, 2018 --- Update the print information
 # Updated on Dec. 19, 2018 --- Update the indent and 9kp10 host issue
 
@@ -19,8 +20,8 @@ function  usage() {
     echo "Now the support remote host list include:"
     echo "    set90:    hmcmanager@9.12.16.136"
     echo "    sem257:   hmcmanager@9.12.16.208"
-    echo "    rundeck:	yijie@9.12.19.67"
-    echo "    s10:      root@9.12.23.17"
+    echo "    runnode:	yijie@9.12.19.67"
+    echo "    rundeck:  root@9.12.23.17"
     echo "    2lt02     root@9.12.23.102"
     echo "    hmc1:     hmcmanager@9.12.35.134"
     echo "    hmc2:     hmcmanager@9.12.35.135"
@@ -75,12 +76,12 @@ then
     remoteIp="9.12.16.208"
     remoteDir="/tmp/yj/"
     remoteUserID="hmcmanager"
-elif  [[ $remoteHost == "rundeck" ]]
+elif  [[ $remoteHost == "runnode" ]]
 then
     remoteIp="9.12.19.67"
     remoteDir="/tmp/yj/"
     remoteUserID="yijie"
-elif  [[ $remoteHost == "s10" ]]
+elif  [[ $remoteHost == "rundeck" ]]
 then
     remoteIp="9.12.23.17"
     remoteDir="/root/yj/"

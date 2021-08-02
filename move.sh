@@ -1,5 +1,6 @@
 #! /bin/bash
 
+# Updated on Aug. 02, 2021 --- Update the rundeck ssh account from root to mayijie cause root not directly log on l7 server
 # Updated on Jan. 20, 2020 --- Update the hostname s10 to rundeck, rundeck to runnode
 # Updated on Dec. 19, 2018 --- Update the print information
 # Updated on Dec. 19, 2018 --- Update the indent and 9kp10 host issue
@@ -21,7 +22,7 @@ function  usage() {
     echo "    set90:    hmcmanager@9.12.16.136"
     echo "    sem257:   hmcmanager@9.12.16.208"
     echo "    runnode:	yijie@9.12.19.67"
-    echo "    rundeck:  root@9.12.23.17"
+    echo "    rundeck:  mayijie@9.12.23.17"
     echo "    2lt02     root@9.12.23.102"
     echo "    hmc1:     hmcmanager@9.12.35.134"
     echo "    hmc2:     hmcmanager@9.12.35.135"
@@ -29,10 +30,11 @@ function  usage() {
     echo "    2kp10:    root@10.20.92.216"
     echo "    rhel:	root@9.112.234.95"
     echo "    cent:	root@9.111.221.37 <expired>"
+    echo "    liw:	yj@9.110.177.197"
     echo
     echo "Examples:"
-    echo "    ./move.sh -t s10 -o move.ini    Copy the local move.ini to the remote s10"
-    echo "    ./move.sh -f s10 -o move.ini    Copy the file move.ini from s10 to local"
+    echo "    ./move.sh -t rundeck -o move.ini    Copy the local move.ini to the remote rundeck"
+    echo "    ./move.sh -f rundeck -o move.ini    Copy the file move.ini from rundeck to local"
     echo
 }
 
@@ -84,7 +86,7 @@ then
 elif  [[ $remoteHost == "rundeck" ]]
 then
     remoteIp="9.12.23.17"
-    remoteDir="/root/yj/"
+    remoteDir="/home/mayijie/"
     remoteUserID="root"
 elif  [[ $remoteHost == "2lt02" ]]
 then
@@ -121,6 +123,11 @@ then
     remoteIp="10.20.92.216"
     remoteDir="/root/yj/"
     remoteUserID="root"
+elif [[ $remoteHost == "liw" ]]
+then
+    remoteIp="9.110.177.197"
+    remoteDir="/tmp/yj/"
+    remoteUserID="yj"
 else
     echo "Please add the remote host parameters to the script..."
     exit 2

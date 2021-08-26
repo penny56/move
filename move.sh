@@ -31,6 +31,7 @@ function  usage() {
     echo "    rhel:	root@9.112.234.95"
     echo "    cent:	root@9.111.221.37 <expired>"
     echo "    liw:	yj@9.110.177.197"
+    echo "    dave:  root@9.12.23.251"
     echo
     echo "Examples:"
     echo "    ./move.sh -t rundeck -o move.ini    Copy the local move.ini to the remote rundeck"
@@ -128,6 +129,11 @@ then
     remoteIp="9.110.177.197"
     remoteDir="/tmp/yj/"
     remoteUserID="yj"
+elif [[ $remoteHost == "dave" ]]
+then
+    remoteIp="9.12.23.251"
+    remoteDir="/root/"
+    remoteUserID="root"
 else
     echo "Please add the remote host parameters to the script..."
     exit 2

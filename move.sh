@@ -19,7 +19,7 @@ function  usage() {
     echo "-h, --help                    show this help"
     echo
     echo "Now the support remote host list include:"
-    echo "    set90:    hmcmanager@9.12.16.136"
+    echo "    sea90:    hmcmanager@9.12.16.136"
     echo "    sem257:   hmcmanager@9.12.16.208"
     echo "    runnode:	yijie@9.12.19.67"
     echo "    rundeck:  mayijie@9.12.23.17"
@@ -30,7 +30,7 @@ function  usage() {
     echo "    2kp10:    root@10.20.92.216"
     echo "    rhel:	root@9.112.234.95"
     echo "    cent:	root@9.111.221.37 <expired>"
-    echo "    liw:	yj@9.110.177.197"
+    echo "    liw:	root@9.110.179.218"
     echo "    dave:  root@9.12.23.251"
     echo
     echo "Examples:"
@@ -69,7 +69,7 @@ do
     esac
 done
 
-if [[ $remoteHost == "set90" ]]
+if [[ $remoteHost == "sea90" ]]
 then
     remoteIp="9.12.16.136"
     remoteDir="/tmp/yj/"
@@ -126,9 +126,9 @@ then
     remoteUserID="root"
 elif [[ $remoteHost == "liw" ]]
 then
-    remoteIp="9.110.177.197"
+    remoteIp="9.110.179.218"
     remoteDir="/tmp/yj/"
-    remoteUserID="yj"
+    remoteUserID="root"
 elif [[ $remoteHost == "dave" ]]
 then
     remoteIp="9.12.23.251"

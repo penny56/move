@@ -1,6 +1,7 @@
 #! /bin/bash
 
-# Updated on Aug. 02, 2021 --- Update the rundeck ssh account from root to mayijie cause root not directly log on l7 server
+# Updated on Jan. 12, 2022 --- Update the zp93l7 server hostname from rundeck to 93l7
+# Updated on Aug. 02, 2021 --- Update the rundeck ssh account from root to mayijie cause root not directly log on 93l7 server
 # Updated on Jan. 20, 2020 --- Update the hostname s10 to rundeck, rundeck to runnode
 # Updated on Dec. 19, 2018 --- Update the print information
 # Updated on Dec. 19, 2018 --- Update the indent and 9kp10 host issue
@@ -22,7 +23,7 @@ function  usage() {
     echo "    sea90:    hmcmanager@9.12.16.136"
     echo "    sem257:   hmcmanager@9.12.16.208"
     echo "    runnode:	yijie@9.12.19.67"
-    echo "    rundeck:  mayijie@9.12.23.17"
+    echo "    93l7:     mayijie@9.12.23.17"
     echo "    2lt02     root@9.12.23.102"
     echo "    hmc1:     hmcmanager@9.12.35.134"
     echo "    hmc2:     hmcmanager@9.12.35.135"
@@ -34,8 +35,8 @@ function  usage() {
     echo "    dave:  root@9.12.23.251"
     echo
     echo "Examples:"
-    echo "    ./move.sh -t rundeck -o move.ini    Copy the local move.ini to the remote rundeck"
-    echo "    ./move.sh -f rundeck -o move.ini    Copy the file move.ini from rundeck to local"
+    echo "    ./move.sh -t 93l7 -o move.ini    Copy the local move.ini to the remote 93l7"
+    echo "    ./move.sh -f 93l7 -o move.ini    Copy the file move.ini from 93l7 to local"
     echo
 }
 
@@ -84,7 +85,7 @@ then
     remoteIp="9.12.19.67"
     remoteDir="/tmp/yj/"
     remoteUserID="yijie"
-elif  [[ $remoteHost == "rundeck" ]]
+elif  [[ $remoteHost == "93l7" ]]
 then
     remoteIp="9.12.23.17"
     remoteDir="/home/mayijie/"

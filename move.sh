@@ -89,7 +89,7 @@ elif  [[ $remoteHost == "93l7" ]]
 then
     remoteIp="9.12.23.17"
     remoteDir="/home/mayijie/"
-    remoteUserID="root"
+    remoteUserID="mayijie"
 elif  [[ $remoteHost == "2lt02" ]]
 then
     remoteIp="9.12.23.102"

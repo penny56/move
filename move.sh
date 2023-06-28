@@ -1,5 +1,6 @@
 #! /bin/bash
 
+# Updated on Jun. 28, 2023 --- Add home directory for dpmsoltest account
 # Updated on Jan. 12, 2022 --- Update the zp93l7 server hostname from rundeck to 93l7
 # Updated on Aug. 02, 2021 --- Update the rundeck ssh account from root to mayijie cause root not directly log on 93l7 server
 # Updated on Jan. 20, 2020 --- Update the hostname s10 to rundeck, rundeck to runnode
@@ -90,6 +91,11 @@ then
     remoteIp="9.12.23.17"
     remoteDir="/home/mayijie/"
     remoteUserID="mayijie"
+elif  [[ $remoteHost == "l7" ]]
+then
+    remoteIp="9.12.23.17"
+    remoteDir="/home/dpmsoltest/"
+    remoteUserID="dpmsoltest"
 elif  [[ $remoteHost == "2lt02" ]]
 then
     remoteIp="9.12.23.102"
